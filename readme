@@ -1,0 +1,37 @@
+Below are the variables which user has to change beofre running it.
+
+aws_region -> region where code should be deployed
+
+
+access_key -> aws access_key
+
+secret_key -> aws secret_key
+
+zone_id -> Aws route53 zone id
+
+
+-----------------------------------------------------------
+Inorder to run use the below commands
+-----------------------------------------------------------
+
+$ terraform init
+The init argument will initialize the environment.
+
+Then issue:
+$ terraform plan -out vpc.plan
+The plan argument will syntax check the files and prepare the deployment.
+
+Deploy the VPC:
+$terraform apply vpc.plan
+
+This will deploy the AWS VPC. To view data about the VPC/Subnet/Security Group from your local Linux box execute:
+
+
+$ terraform show
+
+
+To destroy the VPC execute:
+
+$ terraform destroy
+
+
